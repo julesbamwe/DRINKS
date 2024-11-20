@@ -3,6 +3,6 @@ from core import views
 
 
 urlpatterns = [
-    path('', views.get_all_drinks, name='Get All Drinks'),
-    path('<int:drink_id>/', views.get_drink_by_id, name='Get Drink by ID'),
+    path('', views.drinks, name='Get All Drinks'),
+    path('<int:drink_id>/', views.drink_by_id, name='Get Drink by ID'),
 ]

@@ -10,7 +10,7 @@ from core.serializers import DrinkSerializer
 
 
 @api_view(['GET', 'POST'])
-def get_all_drinks(request):
+def drinks(request):
     if request.method == 'GET':
         # get all drinks, serialize them and return them
         all_drinks = Drink.objects.all()
@@ -25,7 +25,7 @@ def get_all_drinks(request):
 
 
 @api_view(['GET','PUT','DELETE'])
-def get_drink_by_id(request, drink_id):
+def drink_by_id(request, drink_id):
     try:
         drink = Drink.objects.get(pk=drink_id)
     except Drink.DoesNotExist:
